@@ -1,4 +1,4 @@
-Roster Technical Assessment: Web Scraper
+Web Scraper
 This project is a web scraper built to fulfill the Roster Technical Assessment. The goal was to extract supplier data (Name, Email, Profile Link) for 'Video' and 'UGC' roles from public creator directories.
 
 The project successfully demonstrates a robust, real-world approach to web scraping, including tackling progressively difficult anti-scraping measures.
@@ -15,13 +15,13 @@ Pandas: For data cleaning, validation, and exporting to CSV (intended use).
 Setup and Installation
 To run this project, you'll need Python 3 installed.
 
-Navigate to the Project Folder
+1. Navigate to the Project Folder
 Open a terminal and navigate to the project directory:
 
 Bash
 
 cd path/to/roster-scraper
-Create and Activate Virtual Environment
+2. Create and Activate Virtual Environment
 Create and activate a virtual environment to manage dependencies:
 
 Bash
@@ -34,13 +34,13 @@ python -m venv venv
 
 # Activate on macOS/Linux
 # source venv/bin/activate
-Install Dependencies
+3. Install Dependencies
 Install all required libraries from the requirements.txt file:
 
 Bash
 
 pip install -r requirements.txt
-Run the Scraper
+4. Run the Scraper
 Execute the main script:
 
 Bash
@@ -60,14 +60,14 @@ A new, live target (ProductionHUB.com) was identified. However, a simple approac
 Solution: The approach was pivoted from requests to Selenium. By automating a real Chrome browser, the script could more accurately mimic a human user, successfully bypassing the initial block.
 
 Challenge 3: Dynamic Content Loading
-Even with Selenium, the script initially failed to find any profile data. The hypothesis was that the profile listings were being loaded dynamically with JavaScript after the initial page load. The script was parsing the HTML before the data had a chance to appear.
+Even with Selenium, the script initially failed to find any profile data. The hypothesis was that the profile listings were being loaded dynamically with JavaScript. The script was parsing the HTML before the data had a chance to appear.
 
-Solution: "Explicit Waits" (WebDriverWait) were implemented. This instructed the script to intelligently wait for a specific container element (div.listings) to be present on the page before attempting to parse the HTML, solving the timing issue.
+Solution: "Explicit Waits" (WebDriverWait) were implemented. This instructed the script to intelligently wait for a specific container element to be present on the page before attempting to parse the HTML, solving the timing issue.
 
 Challenge 4: Advanced Bot Detection
 The final and most significant challenge was that even after successfully waiting for the content container to load, the script still could not find the specific profile links.
 
-Solution (Diagnosis): A debugging step was added to save the HTML content that Selenium was receiving to a file (debug.html). Upon inspection, it was discovered that the server was sending a simplified, JavaScript-disabled version of the page to the automated browser. This is an advanced bot detection technique where the server sends a basic HTML shell without the actual data rendered.
+Solution (Diagnosis): A debugging step was added to save the HTML content that Selenium was receiving to a file (debug.html). Upon inspection, it was discovered that the server was sending a simplified, JavaScript-disabled version of the page to the automated browser. This is an advanced bot detection technique.
 
 Final Outcome & Conclusion
 While the script is technically successful in launching a browser, navigating to the target, and waiting for content, the final data extraction was prevented by the website's advanced anti-scraping measures.
