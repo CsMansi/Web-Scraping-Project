@@ -30,3 +30,17 @@ python -m venv venv
 
 # Activate on macOS/Linux
 # source venv/bin/activate
+
+#Install Dependencies
+pip install -r requirements.txt
+
+#Run the Scraper
+python scraper.py
+
+### **Final Outcome & Conclusion**
+While the script is technically successful in launching a browser, navigating to the target, and waiting for content, the final data extraction was prevented by the website's advanced anti-scraping measures.
+
+This project demonstrates a comprehensive understanding of the web scraping process, from initial setup to diagnosing and attempting to overcome multiple layers of security. The final diagnosis shows a key real-world limitation of scraping and highlights the importance of debugging and iterative problem-solving.
+
+
+
