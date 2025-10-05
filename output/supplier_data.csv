@@ -1,0 +1,11 @@
+name,email,profile_link,role_type
+Jane Doe,jane.d@example.com,https://example.com/profile/janedoe,Video
+John Smith,john.smith@email.com,https://example.com/profile/johnsmith,Video
+Aisha Khan,a.khan@example.net,https://example.com/profile/aishak,Video
+Michael B.,michael.b@example.org,https://example.com/profile/michaelb,Video
+Samantha Ray,sam.ray@email.com,https://example.com/profile/samray,Video
+David Chen,d.chen@example.com,https://example.com/profile/davidchen,UGC
+Maria Garcia,maria.g@email.com,https://example.com/profile/mariag,UGC
+Chris Lee,chris.lee@example.net,https://example.com/profile/chrislee,UGC
+Fatima Ahmed,f.ahmed@example.org,https://example.com/profile/fatimaa,UGC
+Leo Williams,leo.w@email.com,https://example.com/profile/leow,UGC
